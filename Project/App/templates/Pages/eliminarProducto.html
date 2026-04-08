@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenisShop - Eliminar Producto</title>
+    <link rel="stylesheet" href="{% static 'css/estilotenis.css' %}">
+</head>
+<body>
+
+<nav>
+    <span class="logo">🎾 TenisShop</span>
+    <div>
+        <a href="{% url 'Inicio' %}">Inicio</a>
+        <a href="{% url 'Producto' %}">Productos</a>
+        <a href="{% url 'Agregar' %}">Agregar</a>
+    </div>
+</nav>
+
+<div class="caja-confirmar">
+    <h2>⚠️ Eliminar producto</h2>
+    <p>¿Estás seguro que querés eliminar <strong>{{ producto.nombre }}</strong>? Esta acción no se puede deshacer.</p>
+
+    {% if Mensaje %}
+        <p class="mensaje-ok">✅ {{ Mensaje }}</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-botones">
+            <button type="submit" class="btn-guardar" style="background-color: #cc4444; color: white;">Sí, eliminar</button>
+            <a href="{% url 'Producto' %}" class="btn-cancelar">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<footer>
+     <p>Battiston & Vazquez</p>
+</footer>
+
+</body>
+</html>

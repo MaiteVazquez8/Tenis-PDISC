@@ -1,0 +1,381 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegacion */
+nav {
+    background-color: #111111;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #c9a84c;
+}
+
+nav a {
+    color: #c9a84c;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+
+/* Encabezado de pagina */
+.encabezado {
+    background-color: #111111;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.encabezado h1 {
+    font-size: 32px;
+    color: #c9a84c;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Grilla de productos */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Tarjeta de producto */
+.tarjeta {
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tarjeta-imagen {
+    background-color: #1a1a1a;
+    text-align: center;
+    font-size: 50px;
+    padding: 25px 0;
+    border-bottom: 1px solid #333;
+}
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.tarjeta-info {
+    padding: 15px;
+}
+
+.tarjeta-nombre {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #f0f0f0;
+}
+
+.tarjeta-categoria {
+    font-size: 11px;
+    color: #c9a84c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.tarjeta-descripcion {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.tarjeta-precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+
+.tarjeta-stock {
+    font-size: 12px;
+    color: #777777;
+    float: right;
+    margin-top: 5px;
+}
+
+/* Botones editar / eliminar en la tarjeta */
+.botones {
+    display: flex;
+    border-top: 1px solid #333;
+}
+
+.btn-editar, .btn-eliminar {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    font-family: Arial, sans-serif;
+}
+
+.btn-editar {
+    background-color: #2a2a2a;
+    color: #c9a84c;
+    border-right: 1px solid #333;
+}
+
+.btn-editar:hover {
+    background-color: #c9a84c;
+    color: #111;
+}
+
+.btn-eliminar {
+    background-color: #2a2a2a;
+    color: #cc4444;
+}
+
+.btn-eliminar:hover {
+    background-color: #cc4444;
+    color: #fff;
+}
+
+/* Boton agregar producto */
+.btn-agregar {
+    display: inline-block;
+    background-color: #c9a84c;
+    color: #111;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-agregar:hover {
+    background-color: #e0bc60;
+}
+
+/* Formulario */
+.form-caja {
+    background-color: #222222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 30px;
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+.form-caja h2 {
+    color: #c9a84c;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    color: #aaaaaa;
+    margin-bottom: 5px;
+}
+
+.campo input, .campo textarea, .campo select {
+    width: 100%;
+    padding: 9px 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #f0f0f0;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.campo input:focus, .campo textarea:focus, .campo select:focus {
+    outline: none;
+    border-color: #c9a84c;
+}
+
+/* Botones del formulario */
+.form-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-guardar {
+    flex: 1;
+    padding: 11px;
+    background-color: #c9a84c;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.btn-guardar:hover {
+    background-color: #e0bc60;
+}
+
+.btn-cancelar {
+    flex: 1;
+    padding: 11px;
+    background-color: #333;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.btn-cancelar:hover {
+    background-color: #444;
+}
+
+/* Mensaje de exito */
+.mensaje-ok {
+    background-color: #1a3a1a;
+    border: 1px solid #2d6a2d;
+    color: #6abf6a;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Caja de confirmacion para eliminar */
+.caja-confirmar {
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.caja-confirmar h2 {
+    color: #cc4444;
+    margin-bottom: 10px;
+}
+
+.caja-confirmar p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Cards de info en la home */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: #222222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 25px;
+    text-align: center;
+}
+
+.info-card .emoji {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    color: #c9a84c;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.info-card p {
+    color: #aaaaaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Seccion de texto */
+.seccion-texto {
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.seccion-texto h2 {
+    color: #c9a84c;
+    margin-bottom: 15px;
+}
+
+.seccion-texto p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Mensaje cuando no hay productos */
+.sin-productos {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 13px;
+    margin-top: 50px;
+}

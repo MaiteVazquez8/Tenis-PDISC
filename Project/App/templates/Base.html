@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenisShop - Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/estilotenis.css' %}">
+</head>
+<body>
+
+<nav>
+    <span class="logo">🎾 TenisShop</span>
+    <div>
+        <a href="{% url 'Inicio' %}">Inicio</a>
+        <a href="{% url 'Producto' %}">Productos</a>
+        <a href="{% url 'Agregar' %}">Agregar</a>
+    </div>
+</nav>
+
+<div class="encabezado">
+    <h1>🎾 TenisShop</h1>
+    <p>Equipamiento de tenis de primer nivel</p>
+</div>
+
+<div class="contenedor">
+
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="emoji">🎾</div>
+            <h3>Raquetas</h3>
+            <p>Las mejores marcas: Wilson, Babolat, Head, Yonex. Para todos los niveles de juego.</p>
+        </div>
+        <div class="info-card">
+            <div class="emoji">🟡</div>
+            <h3>Pelotas</h3>
+            <p>Pelotas oficiales para entrenamiento y torneos. Alta durabilidad y buen rebote.</p>
+        </div>
+        <div class="info-card">
+            <div class="emoji">🎒</div>
+            <h3>Bolsos</h3>
+            <p>Bolsos especializados con compartimentos para raquetas, ropa y accesorios.</p>
+        </div>
+        <div class="info-card">
+            <div class="emoji">🏅</div>
+            <h3>Accesorios</h3>
+            <p>Overgrips, encordados, muñequeras y todo lo que necesitás para jugar mejor.</p>
+        </div>
+    </div>
+
+    <div class="seccion-texto">
+        <h2>Sobre el Tenis</h2>
+        <p>
+            El tenis es uno de los deportes más populares del mundo, practicado en más de 200 países.
+            Tiene cuatro torneos principales llamados Grand Slams: Roland Garros, Wimbledon, el US Open y el Australian Open.
+            En TenisShop encontrás todo el equipamiento que necesitás para disfrutar este deporte al máximo.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+     <p>Battiston & Vazquez</p>
+</footer>
+
+</body>
+</html>

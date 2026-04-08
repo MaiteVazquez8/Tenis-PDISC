@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TenisShop - Productos</title>
+    <link rel="stylesheet" href="{% static 'css/estilotenis.css' %}">
+</head>
+<body>
+
+<nav>
+    <span class="logo">🎾 TenisShop</span>
+    <div>
+        <a href="{% url 'Inicio' %}">Inicio</a>
+        <a href="{% url 'Producto' %}">Productos</a>
+        <a href="{% url 'Agregar' %}">Agregar</a>
+    </div>
+</nav>
+
+<div class="encabezado">
+    <h1>Productos</h1>
+    <p>Todo nuestro equipamiento disponible</p>
+</div>
+
+<div class="contenedor">
+
+    <a href="{% url 'Agregar' %}" class="btn-agregar">+ Agregar Producto</a>
+
+    {% if productos %}
+        <div class="grilla">
+            {% for producto in productos %}
+            <div class="tarjeta">
+
+                <div class="tarjeta-imagen">
+                    {% if producto.Imagen %}
+                        <img src="{{ producto.Imagen.url }}" alt="{{ producto.Nombre }}">
+                    {% else %}
+                        🎾
+                    {% endif %}
+                </div>
+
+                <div class="tarjeta-info">
+                    <div class="tarjeta-nombre">{{ producto.Nombre }}</div>
+                    <div class="tarjeta-categoria">{{ producto.Categoria }} — {{ producto.Colores }}</div>
+                    <div class="tarjeta-descripcion">{{ producto.Descripcion }}</div>
+                    <div>
+                        <span class="tarjeta-precio">${{ producto.Precio }}</span>
+                        <span class="tarjeta-stock">Stock: {{ producto.Cantidad }}</span>
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <a href="{% url 'Modificar' producto.Codigo %}" class="btn-editar">✏️ Editar</a>
+                    <a href="{% url 'Eliminar' producto.Codigo %}" class="btn-eliminar">🗑️ Eliminar</a>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    {% else %}
+        <div class="sin-productos">
+            <p>🎾 No hay productos cargados todavía.</p>
+            <br>
+            <a href="{% url 'Agregar' %}" class="btn-agregar">Agregar el primero</a>
+        </div>
+    {% endif %}
+
+</div>
+
+<footer>
+    <p>Battiston & Vazquez</p>
+</footer>
+
+</body>
+</html>
